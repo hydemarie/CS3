@@ -1,0 +1,37 @@
+body{
+	background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{
+    text-align:center;
+    background-color:#ff7f50;
+    font-family:georgian;
+    border:2px dotted blue;
+    padding:10px 15px;
+    width:250px;
+    margin:auto;
+    margin-bottom:20px;
+}
+p{
+    text-align:justify;
+    background-color:hsl(300,76%,72%);
+    font-style:italic;
+    padding:20px;
+    margin:auto;
+    border:3px black;
+    border-top-style:dashed;
+    border-right-style:dotted;
+    border-bottom-style:double;
+    border-left-style:solid;
+    width:500px;
+}
+
+span{
+    font-weight:bold;
+    font-style:italic;
+    color:rgb(0, 100, 100);
+    margin-left:2px;
+    margin-right:5px;
+}
