@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Del Socorro, Hyde</title>
+		<meta name="author" content="Hyde Marie D. Del Socorro">
+		
+		<style> 
+			a.one:link{
+				background-color: #6495ED;
+				font-family:Sans-serif;
+				font-size:20px;
+				color: white;
+				text-decoration:none;
+				padding:10px;
+				}
+			
+			a.one:visited{
+				background-color:#FF00FF;
+				color:black;
+				}
+				
+			a.one:hover{
+				background-color:#00FF00;
+				}
+				
+			a.one:active{
+				background-color:#CCCCFF;
+				}
+				
+			a.two:link{
+				background-color: #40E0D0;
+				font-family:Sans-serif;
+				font-size:20px;
+				color:white;
+				text-decoration:none;
+				padding:10px;
+				margin:5px;
+				}
+			
+			a.two:visited{
+				background-color:#FA8072;
+				color:black;
+				}
+				
+			a.two:hover{
+				background-color:#FFBF00;
+				}
+				
+			a.two:active{
+				background-color:#9FE2BF;
+				}
+			
+			body{ 
+				padding:20px;
+				}
+				
+			.tab div{
+				display:flex;
+				border:solid black 1px;
+				width:200px;
+				height:200px;
+				margin-top:40px;
+				}
+				
+			.tab div:target#div1{
+				display:block;
+				border:solid black 1px;
+				background-color:red;
+				color:white;
+				}
+				
+			.tab div:target#div2{
+				display:block;
+				border:dotted green 10px;
+				background-color:#043927; 
+				color: white;
+				}
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="tab">
+		
+		<a class="one" href="#div1" target="_blank"> 
+					First link
+		</a>
+		
+		<a class="two" href="#div2" target="_blank">
+					Second link
+		</a>
+		
+		<div id="div1">
+		<h2>DIV 1 here</h2>
+		</div>
+		
+		<div id="div2">
+		<h2>DIV 2 here</h2>
+		</div>
+		
+		</div>
+</body>
+</html>
+
