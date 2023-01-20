@@ -1,0 +1,706 @@
+body{
+	margin:0px;
+	background-color:#FFFFFF;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+span{
+	color:#f9004d;
+}
+
+.logo {
+	color:black;
+	font-size:25px;
+	letter-spacing:1px;
+	cursor:pointer;
+	padding-left:50px;
+}
+
+nav ul li a {
+	float:right;
+	text-decoration:none;
+	color: #222221;
+	font-size: 20px;
+	font-weight:500;
+	padding: 10px 22px;
+	border-radius:4px;
+}
+
+nav ul {
+	float:right;
+	right:10px;
+	list-style-type:none;
+}
+
+nav ul li {
+	display:inline-block;
+	padding:10px 25px;
+}
+
+nav {
+	border-bottom: 1px solid #D1CCBD;
+    width:100%;
+	margin:auto;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+	background:#fff;
+	z-index:2;
+	position:fixed;
+}
+
+.kid{
+	justify-content:center;
+	opacity:0.9px;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	width:100%;
+}
+
+section{
+	position:relative;
+	margin-left:10px;
+	margin-right:10px;
+	text-align:justify;
+}
+
+article{
+	width:40%;
+	background-color:white;
+	float:left;
+	margin-left:90px;
+}
+
+.pretty{
+	padding-top:40px;
+	width:50%;
+	float:left;
+	text-align:justify;
+}
+
+.handsome{
+	text-align:center;
+	text-align:justify;
+	padding-right:25px;
+	background-color:white;
+	float:left;
+	margin:30px;
+}
+
+.eyes{
+	position:relative;
+	margin-left:20px;
+	margin-right:20px;
+	float:left;
+}
+
+#mySolution{
+	text-align:center;
+	color: black;
+}
+
+#myCause{
+	color: black;
+}
+
+#myEffect{
+	color: black;
+}
+
+.curious{
+	float:left;
+	padding-top:100px
+}
+
+nav ul li a:link{
+	color:black;
+}
+
+nav ul li a:visited{
+	color:red;
+}
+nav ul li a:hover{
+	color:orange;
+	box-shadow:5px 10px 30px rgb(85 85 85/20%);
+}
+nav ul li a:active{
+	color:white;
+}
+
+#header-image-menu img{
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+.azenith{
+	padding-top:50px;
+	position:absolute;
+	top:50%;
+	left:65%;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size:20px;
+	text-align:justify;
+}
+
+.azenith h1{
+	font-size:55px;
+	margin:20px 0px 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.uwu{
+	width:100%;
+	margin:auto;
+	text-align:center;
+	padding-top:20px;
+	border-color:white;
+	font-family: 'Oswald', sans-serif;
+}
+
+.meow{
+	font-size:25px;
+	text-align:center;
+}
+
+.meow img{
+	border-radius: 30px;
+	padding: 5px;
+	width: 150px;
+}
+
+.bank{
+	text-align:center;
+	background-color:white;
+	margin-bottom:20px;
+	border-style:solid;
+	border-color:black;
+	margin:auto;
+	box-shadow:5px 10px 30px rgb(85 85 85/20%);
+	width:60%;
+	position:relative;
+}
+
+#red{
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+.rice{
+	color:white;
+	top:30%;
+	left:40%;
+	position:absolute;
+	font-size:17px;
+	font-family: Helvetica, sans-serif;
+}
+
+
+.content{
+	width:70%;
+	margin:auto;
+	text-align:center;
+	padding-top:20px;
+	padding-bottom:50px;
+	border-color:white;
+	font-family: 'Oswald', sans-serif;
+}
+
+.content h2{
+	font-size:55px;
+	margin:20px 0px 20px;
+	font-family: 'Roboto', sans-serif;
+	transform:skewX(-20deg);
+	-webkit-transform:skewX(-20deg);
+	-ms-transform:skewX(-20deg);
+	-o-transform:skewX(-20deg);
+	transform:skewX(-20deg);
+}
+
+.cs{
+	background-color:#F5F5F5;
+	padding-bottom:100px;
+}
+
+.cs video{
+	padding-left:100px;
+	padding-top:100px;
+}
+
+.food{
+	padding-top:100px;
+	padding-right:150px;
+	float:right;
+	color: black;
+	font-size:20px;
+	text-align:justify;
+}
+
+.food h1{
+	font-size:35px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.food h4{
+	font-family: inherit;
+	font-weight:500;
+	
+}
+
+.food a:link{
+	background-color:red;
+	text-decoration:none;
+	padding:10px;
+	color:white;
+	border-radius:20px;
+}
+
+.food a:visited{
+	background-color:yellow;
+}
+
+.food a:hover{
+	background-color:#ACDF87;
+	color:black;
+}
+	
+.food a:active{
+	background-color:red;
+	color:white;
+}
+
+.give{
+	padding-top:50px;
+	display: block;
+	margin:auto;
+	padding-bottom:20px;
+	border-radius:20px;
+}
+
+.poverty{
+	padding-top:50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:50%;
+}
+
+.kids{
+	width:100px;
+	padding-left:80px;
+}
+
+.handsome h2{
+	font-family: 'Oswald', sans-serif;
+	font-size:50px;
+}
+
+.handsome .give{
+	margin:auto;
+	width:700px;
+	height:450px;
+}
+
+.handsome .kids{
+	margin:auto;
+	width:720px;
+	height:450px;
+}
+
+
+.christian{
+	width:100%;
+}
+
+.christian .francis{
+	width:80%;
+	display:block;
+	margin:0px auto;
+	padding:50px 0px;
+}
+
+.francis .head{
+	width:100%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.francis .head h1{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.migs{
+	float:left;
+	width:55%;
+}
+
+.image-section{
+	float:right;
+	width:40%;
+}
+
+.image-section img{
+	width:100%;
+	height:auto;
+	border-radius:20px;
+}
+
+.migs .julla h3{
+	text-align:justify;
+	color:black;
+	font-size:18px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.migs .julla p{
+	text-align:justify;
+	margin-top:20px;
+	font-size:18px;
+	color:black;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.migs .julla .button{
+	margin-top:50px;
+}
+
+.migs .julla .button a{
+	text-decoration:none;
+	padding: 8px 25px;
+	background-color:#fa8072;
+	border-radius:40px;
+	color:black;
+	font-size:18px;
+	letter-spacing:1;
+	font-family: 'Work Sans', sans-serif;
+	
+}
+
+.chili{
+	background-color:red;
+}
+
+.hyde{
+	width:100%;
+}
+
+.hyde .sodium{
+	width:80%;
+	display:block;
+	margin:0px auto;
+	padding:250px 0px;
+}
+
+.sodium .lithium{
+	width:100%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.sodium .lithium h1{
+	font-size:35px;
+	color:black;
+	padding-top:100px;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.del{
+	float:right;
+	width:55%;
+}
+
+.happy-section{
+	float:left;
+	width:40%;
+}
+
+.happy-section img{
+	width:100%;
+	height:auto;
+	border-radius:20px;
+}
+
+
+.del .socorro h2{
+	margin-top:20px;
+	font-size:18px;
+	color:black;
+	padding-top:5px;
+	text-align:justify;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.dorm{
+	padding-top:20px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+	color: white;
+	font-size:50px;
+	text-align:center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.pisay{
+	width:100%;
+}
+
+.pisay .src{
+	width:80%;
+	display:block;
+	margin:0px auto;
+	padding:80px 0px;
+}
+
+.best .campus{
+	float:left;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.best .campus h1{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.best .campus h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.facts .only{
+	float:right;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.facts .only h1{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.facts .only h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+
+.pisay .src .group img{
+	padding-left:120px;
+	margin:auto;
+	width:80%;
+}
+
+.pisay .src .group h1{
+	font-family: 'Raleway', sans-serif;
+	text-align:center;
+	padding-top:20px;
+}
+
+.boys{
+	padding-top:20px;
+	position:absolute;
+	top:50%;
+	left:45%;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+	color: white;
+	font-size:50px;
+	text-align:center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.narra{
+	width:100%;
+	
+}
+
+.narra .diamond{
+	width:80%;
+	display:block;
+	margin:0px auto;
+	padding:100px 0px;
+}
+
+.mahogany .acacia{
+	float:left;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.mahogany .acacia h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.mahogany .acacia h3{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.ruby .sapphire{
+	float:right;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.ruby .sapphire h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.ruby .sapphire h3{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.proton .neutron{
+	float:left;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.proton .neutron h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.proton .neutron h3{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.boron .electron{
+	float:right;
+	width:50%;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.boron .electron h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	color:#ED2939;
+}
+
+.boron .electron h3{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.pisay .src .values {
+	text-align:center;
+	border:2px solid red;
+}
+
+.pisay .src .values h2{
+	font-size:35px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+	color:#ED2939;
+}
+
+.pisay .src .values h4{
+	font-size:30px;
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+
+.fbsprite{
+	float:left;
+	background: url(../images/icon.png) no-repeat -182px -91px;
+	width: 33px;
+	height: 33px;
+	margin-left: 300px;
+	margin-right:300px;
+	margin-top:20px;
+	}
+.fbsprite:hover {
+	float:left;
+	background: url(../images/icon.png) no-repeat -182px -16px;
+	width: 33px;
+	height: 33px;
+	margin-left: 300px;
+	margin-right:300px;
+	margin-top:20px;
+	}
+.twtsprite{
+	float:right;
+	background: url(../images/icon.png) no-repeat -296px -91px;
+	width: 33px;
+	height: 33px;
+	margin-right:300px;
+	margin-left: 300px;
+	margin-top:20px;
+}
+.twtsprite:hover {
+	background: url(../images/icon.png) no-repeat -296px -16px;
+	width: 33px;
+	height: 33px;
+	margin-right:300px;
+	margin-left: 300px;
+	margin-top:20px;
+}
+
+footer{
+	text-align:center;
+	padding-bottom:20px;
+}
+
+.julian{4
+	padding-top:20px;
+}
+
+::selection{
+	color:red;
+	background-color:yellow;
+}
+		
