@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body onload="call()">
+		<script>
+			function call(){
+				var y = confirm("Proceed to second page?");
+		
+				if(y==true){
+					window.open("second.html");
+				}else{
+					document.write("okay fine");
+				}
+			
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Second Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+			<style>
+				*{
+					text-align:center;
+					padding:10px;
+				}
+			
+				img{
+				width:500px;
+				height:700px;
+				}
+			</style>
+	</head>
+	
+	<body>
+		<img id="asahi" src="images/firstimage.jpg">
+		<button onclick="originalImage()"> Click for a new image! </button>
+		<button onclick="secondImage()"> Back to original image! </button>
+		
+		<script>
+			
+			function originalImage(){
+				document.getElementById("asahi").src = "images/secondimage.jpg";
+			}
+			function secondImage(){
+				document.getElementById("asahi").src = "images/firstimage.jpg";
+			}
+			
+		</script>
+	</body>
+</html>
+		
