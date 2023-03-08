@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formative Assessment 10</title>
+	</head>
+	<body>
+	<script>
+		var randomNumber = Math.floor(Math.random() * 1001);
+
+		document.write("Randomly generated number: " + randomNumber);
+
+		document.write("<br>");
+		var onesBreak = randomNumber % 10;
+		var tensBreak = Math.floor((randomNumber % 100) / 10) * 10;
+		var hundredsBreak = Math.floor(randomNumber / 100) * 100;
+		
+		document.write("Breakdown: " + hundredsBreak + ", " + tensBreak + ", " + onesBreak);	
+		
+	</script>
+	</body>
+</html>
