@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formative Assessment 11</title>
+	</head>
+	<body onload="determineTriangle(a,b,c)">
+	<script>
+		var a = prompt("Enter the length of side 1: ");
+		var b = prompt("Enter the length of side 2: ");
+		var c = prompt("Enter the length of side 3: ");
+		
+		function determineTriangle(a,b,c) {
+
+			if(a==b && b==c && c==a)
+				{
+					alert("The triangle is EQUILATERAL.");
+				}
+				else if((a==b && b!=c) || (a!=b && c==a) || (c==b && c!=a))
+				{
+					alert("The triangle is ISOSCELES.");
+				}
+				else if(a!=b && b!=c && c!=a)
+				{
+					alert("The triangle is SCALENE.");
+				}
+			}
+			
+	</script>
+</body>
+</html>
