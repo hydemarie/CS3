@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My Online Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+	<h1> Welcome to MerYEH!nda </h1>
+	<h2> Please select from the following items </h2>
+	<ol>
+		<li> Item #1 Brownies: 95.00 </li>
+		<li> Item #2 Pearl Milktea: 150.00 </li>
+		<li> Item #3 Cinnamon Roll: 110.00 </li>
+	</ol>
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill is <span id="tbill"> </span> </p>
+	
+	<button onclick="buyItem()"> Buy an Item </button>
+	<button onclick="clearItem()"> Clear </button>
+    
+    <script>
+	var bill = 0;
+	var totalBill = 0;
+	
+		<!---Buy Item Function-->
+		function buyItem(){ 
+			var a = prompt("Enter item number: "); // Prompts the user to enter the item number
+			var b = prompt("Enter quantity of item: "); // Prompts the user to enter the quantity of item
+		
+			if(isNaN(b)){ // This checks if quantity entered is an integer
+					alert("Invalid quantity entered.");
+				return;
+			}
+			
+			if(a == 1) {
+
+				bill = 95*b; // Computes for the amount to be paid for current purchase
+				totalBill += 95*b; // Computes for the total amount to be paid
+				
+				document.getElementById("item").innerHTML = "Brownies";
+				document.getElementById("qty").innerHTML = b;
+				document.getElementById("bill").innerHTML = bill.toFixed(2);
+				document.getElementById("tbill").innerHTML = totalBill.toFixed(2);
+			}
+			else if(a == 2) {
+				
+				bill = 150*b; // Computes for the amount to be paid for current purchase
+				totalBill += 150*b; // Computes for the total amount to be paid
+				
+				document.getElementById("item").innerHTML = "Pearl Milktea";
+				document.getElementById("qty").innerHTML = b;				
+				document.getElementById("bill").innerHTML = bill.toFixed(2);
+				document.getElementById("tbill").innerHTML = totalBill.toFixed(2);
+			}
+			else if(a == 3) {
+			
+				bill = 110*b; // Computes for the amount to be paid for current purchase
+				totalBill += 110*b; // Computes for the total amount to be paid
+				
+				document.getElementById("item").innerHTML = "Cinammon Roll";
+				document.getElementById("qty").innerHTML = b;				
+				document.getElementById("bill").innerHTML = bill.toFixed(2);
+				document.getElementById("tbill").innerHTML = totalBill.toFixed(2);
+			}						
+		
+        }
+			<!---Clear Item Function-->
+			function clearItem() { 
+				totalBill = 0;
+				
+				document.getElementById("item").innerHTML = "";
+				document.getElementById("qty").innerHTML = "";
+				document.getElementById("bill").innerHTML = "";
+				document.getElementById("tbill").innerHTML = "";
+			}
+		
+    	
+    
+    </script>
+</body>
+
+</html>
+
