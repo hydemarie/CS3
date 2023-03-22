@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta charset="UTF-8"> 
+		<meta name="author" content="Hyde Marie Del Socorro"> 
+		<meta name="keywords" content="HTML, CSS, JavaScript"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+	<body onload="OTPgenerator()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="" onclick="OTPgenerator()"> New OTP </a></h2>
+    
+	<button onclick="checkOTP()"> Enter the OTP as shown above </button>
+    
+    <script>
+			<!--- Generates OTP-->
+            function OTPgenerator() { 
+                var otp = '';
+                for (var i = 0; i < 6; i++) {
+					var rand = Math.floor(Math.random() * 10);
+					var randString = rand.toString();
+					otp = otp.concat(randString);
+					document.getElementById("otp").innerHTML = otp;
+				}
+            }
+            
+			<!--- To compare the entered and current OTP-->
+            function checkOTP() {  
+                var enteredOTP = prompt('Please enter the OTP:');
+                var generatedOTP = document.getElementById("otp").innerHTML; 
+				
+				<!--- Checks if entered OTP is correct or incorrect -->
+                if (enteredOTP === generatedOTP) { 
+                    window.open('https://www.youtube.com/watch?v=aPd9exmH17o'); // Opens the site when entered OTP is correct
+                } else {
+                    alert('Incorrect OTP.'); // Alerts if entered OTP is incorrect
+                    OTPgenerator();
+                }
+            }
+    
+    </script>
+</body>
+</html>
+
