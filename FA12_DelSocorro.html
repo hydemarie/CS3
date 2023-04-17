@@ -33,7 +33,7 @@
 			var firstRange = parseInt(document.getElementById("myRow").value);
 			var secondRange = parseInt(document.getElementById("myColumn").value);
 			
-			if (firstRange < 2 || firstRange > 10 || secondRange < 2 || secondRange > 10) {
+			if (firstRange <= 2 || firstRange >= 10 || secondRange <= 2 || secondRange >= 10) {
 				alert("Please enter numbers between 2 and 10");
 				return;
 			}
