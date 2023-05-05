@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Alternative Assessment 1 </title>
+	<meta charset="UTF-8"> 
+	<meta name="author" content="Hyde Marie Del Socorro"> 
+	<meta name="keywords" content="HTML, CSS, JavaScript"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+	// Prompt the user for an mRNA sequence
+	var mRNASequence = prompt("Enter mRNA Sequence");
+			
+	// Initialize an array to store the codon identifiers
+	var codonIdentifiers = [];
+			
+	// Find the start codon
+	var startCodonIndex = mRNASequence.indexOf("AUG");
+	if (startCodonIndex == -1) {
+		// If there's no start codon, display an error message and stop processing
+		document.write("No start codon (AUG) found");
+		}
+			
+	// Extract the RNA sequence starting from the start codon
+	var mRNAStartingCodon = mRNASequence.slice(startCodonIndex);
+			
+		// Identify the codons and store their identifiers in the array
+		for (let i = 0; i < mRNAStartingCodon.length; i += 3) {
+			var currentCodon = mRNAStartingCodon.slice(i, i + 3);
+			codonIdentifiers.push(currentCodon);
+				
+			if (currentCodon == "UAA" || currentCodon == "UAG" || currentCodon == "UGA") {
+				// If we've reached a stop codon, stop processing
+				break;
+				}
+			}
+			
+	// Display the array of codon identifiers
+			document.write("[ ", codonIdentifiers, " ]<br>");
+			
+	// Identify the amino acid for each codon and display the results
+	for (let c = 0; c < codonIdentifiers.length; c++) {
+		var currentCodon = codonIdentifiers[c];
+		let currentAminoAcid;
+	
+		switch(currentCodon){
+			case "AUG":
+			currentAminoAcid = "Met";
+			break;
+			
+			case "UUU":
+			case "UUC":
+			currentAminoAcid = "Phe";
+			break;
+			
+			case "UUA":
+			case "UUG": 
+			case "CUU": 
+			case "CUC": 
+			case "CUA": 
+			case "CUG": 
+			currentAminoAcid = "Leu";
+			break;
+			
+			case "AUU": 
+			case "AUC": 
+			case "AUA": 
+			currentAminoAcid = "Ile";
+			break;
+			
+			case "GUU": 
+			case "GUC": 
+			case "GUA": 
+			case "GUG": 
+			currentAminoAcid = "Val";
+			break;
+			
+			case "UCU": 
+			case "UCC": 
+			case "UCA": 
+			case "UCG": 
+			currentAminoAcid = "Ser";
+			break;
+			
+			case "CCU": 
+			case "CCC": 
+			case "CCA": 
+			case "CCG":
+			currentAminoAcid = "Pro";
+			break;
+			
+			case "ACU": 
+			case "ACC": 
+			case "ACA": 
+			case "ACG": 
+			currentAminoAcid = "Thr";
+			break;
+			
+			case "GCU": 
+			case "GCC": 
+			case "GCA": 
+			case "GCG": 
+			currentAminoAcid = "Ala";
+			break;
+			
+			case "UAU": 
+			case "UAC": 
+			currentAminoAcid = "Tyr";
+			break;
+			
+			case "UAA": 
+			case "UAG": 
+			case "UGA": 
+			currentAminoAcid = "STOP";
+			break;
+			
+			case "CAU": 
+			case "CAC": 
+			currentAminoAcid = "His";
+			break;
+			
+			case "CAA": 
+			case "CAG": 
+			currentAminoAcid = "Gln";
+			break;
+			
+			case "AAU": 
+			case "AAC": 
+			currentAminoAcid = "Asn";
+			break;
+			
+			case "AAA": 
+			case "AAG": 
+			currentAminoAcid = "Lys";
+			break;
+			
+			case "GAU": 
+			case "GAC": 
+			currentAminoAcid = "Asp";
+			break;
+			
+			case "GAA": 
+			case "GAG":
+			currentAminoAcid = "Glu";
+			break;
+			
+			case "UGU": 
+			case "UGC": 
+			currentAminoAcid = "Cys";
+			break;
+			
+			case "UGG": 
+			currentAminoAcid = "Trp";
+			break;
+			
+			case "CGU": 
+			case "CGC": 
+			case "CGA": 
+			case "CGG": 
+			case "AGA": 
+			case "AGG": 
+			currentAminoAcid = "Arg";
+			break;
+			
+			case "AGU": 
+			case "AGC": 
+			currentAminoAcid = "Ser";
+			break;
+			
+			case "GGU": 
+			case "GGC": 
+			case "GGA": 
+			case "GGG": 
+			currentAminoAcid = "Gly";
+			break;
+			
+			default:
+				currentAminoAcid = "UNKNOWN";
+				break;
+		}
+	  
+		document.write("<br/>" + currentCodon + "-->" + currentAminoAcid); 
+
+		if(currentAminoAcid == "STOP"){
+		break;
+		}
+}
+
+</script>
+</body>
+</html>
