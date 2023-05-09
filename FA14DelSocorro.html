@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formative Assessment 14 </title>
+	<meta charset="UTF-8"> 
+	<meta name="author" content="Hyde Marie Del Socorro"> 
+	<meta name="keywords" content="HTML, CSS, JavaScript"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+		  font-family: Arial, sans-serif;
+		  color:white;
+		  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+		}
+
+		form {
+		  max-width: 400px;
+		  margin:auto;
+		  margin-top:50px;
+		  padding: 30px;
+		  background-color: #1c1c1c;
+		  border: 2px solid #333;
+		  border-radius:8px;
+		}
+
+		input,
+		select,
+		textarea {
+		  width: 100%;
+		  padding: 12px;
+		  border: 1px solid #ccc;
+		  box-sizing: border-box;
+		  background:white;
+		}
+
+		input:focus,
+		select:focus,
+		textarea:focus {
+		  border: 1px solid #333;
+		}
+
+		label {
+		  display: block;
+		  margin-bottom: 5px;
+		  font-weight: bold;
+		  color: white;
+		}
+
+		legend {
+		  font-size: 25px;
+		  font-weight: bold;
+		  text-align: center;
+		  margin-bottom: 20px;
+		  color:white;
+		  border: #1c1c1c:
+		}
+
+		fieldset {
+		 margin-bottom: 30px;
+		}
+		
+		p {
+		 text-align:center;
+		 color:white;
+		}
+
+		a {
+		 color: #3897f0;
+		 text-decoration: none;
+		}
+		
+		#MainSum{
+		max-width: 400px;
+		  margin: 50px auto;
+		  padding: 30px;
+		  background-color: #1c1c1c ;
+		  border: 2px solid #333;
+		  color:black;
+		  border-radius:8px;
+		}
+		
+		#MainSum h1{
+		text-align:center;
+		color:white;
+		}
+		
+		#hotdog{
+		display:flex;
+		}
+		
+		#uwu{
+		background:#3897f0;
+		border-radius:8px;
+		}
+		
+		#awa{
+		background:#3897f0;
+		border-radius:8px;
+		}
+		
+		::placeholder {
+		color: black;
+		}
+		
+		#output{
+		color:black;
+		}
+		
+	</style>
+</head>
+<body>
+<form onsubmit="return outputInformation()">
+	<fieldset id ="input">
+		<legend>Sign Up</legend>
+		<div>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Last Name, First Name MI." required onblur="validateInput(this)" onfocus="validateOutput(this)">
+		</div>
+		</br>
+		
+		<div>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" placeholder="Username" required onblur="validateInput(this)" onfocus="validateOutput(this)">
+		</div>
+		</br>
+		
+		<div>
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender" required onblur="validateInput(this)" onfocus="validateOutput(this)">
+			<option value="">--Select--</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="Prefer not to mention">Prefer not to mention</option>
+		</select>
+		</div>
+		</br>
+
+		<div>
+		<label for="password">Password</span></label>
+		<input type="password" id="password" name="password" placeholder="Password" required onblur="validateInput(this)" onfocus="validateOutput(this)">
+		</div>
+		</br>
+		
+		<div>
+		<label for="email">Email Address</span></label>
+		<input type="email" id="email" name="email" placeholder="example@gmail.com" required onblur="validateInput(this)" onfocus="validateOutput(this)">
+		</div>
+		</br>
+		
+		<div>
+		<label for="address">Address</span></label>
+		<input type="address" id="address" name="address" placeholder="Address" required onblur="validateInput(this)" onfocus="validateOutput(this)">
+		</div>
+		</br>
+		
+		<div>
+		<label for="interest">Interest</span></label>
+		<textarea id="interest" rows="5" name="interest" placeholder="Create a short caption" required onblur="validateInput(this)" onfocus="validateOutput(this)"></textarea>
+		<div>
+		</br>
+		
+		<p>By signing up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a>, and <a href="#">Cookies Policy</a>.</p>
+		<p>Already have an account? <a href="#">Log in</a></p>
+		
+		<div id="hotdog">
+		<input type="submit" value="Sign Up" id="uwu"> <span> ㅤ</span>
+		<input type="reset" value="Reset" id="awa" onclick="resetAll()">
+		</div>
+		
+	</fieldset>
+</form>
+	
+	<br/>
+	
+	<div id="MainSum">
+		<legend>Profile</legend>
+		
+		<div id="output"></div>
+		
+			<p> Name: <span id="outputName"> </span></p>
+			<p> Username: <span id="outputUsername"> </span> </p>
+			<p> Gender: <span id="outputGender"> </span> </p>
+			<p> Password: <span id="outputPassword"> </span> </p>
+			<p> Email Address: <span id="outputEmail"> </span> </p>
+			<p> Address: <span id="outputAddress"> </span> </p>
+			<p> Interest: <span id="outputInterest"> </span> </p>
+
+		</div>
+	</div>
+
+<script>
+	function validateInput(inputElement) {
+	  if (inputElement.value.trim() === '') {
+		inputElement.style.border = '2px solid red';
+	  } else {
+		inputElement.style.border = '2px solid green';
+	}
+	}
+
+	function validateOutput(inputElement) {
+		inputElement.style.border = '2px solid black';
+	}
+	
+	function resetAll() {
+		document.getElementById("name").style.border = "";
+		document.getElementById("username").style.border = "";
+		document.getElementById("gender").style.border = "";
+		document.getElementById("password").style.border = "";
+		document.getElementById("email").style.border = "";
+		document.getElementById("address").style.border = "";
+		document.getElementById("interest").style.border = "";
+		document.getElementById("outputName").innerHTML = "" ;
+		document.getElementById("outputName").innerHTML = "" ;
+		document.getElementById("outputUsername").innerHTML = "" ;
+		document.getElementById("outputGender").innerHTML = "" ;
+		document.getElementById("outputPassword").innerHTML = "" ;
+		document.getElementById("outputEmail").innerHTML = "" ;
+		document.getElementById("outputAddress").innerHTML = "" ;
+		document.getElementById("outputInterest").innerHTML = "" ;
+	}
+	
+	function outputInformation () {
+		var n = document.getElementById("name").value;
+		document.getElementById("outputName").innerHTML = n;
+		
+		var un = document.getElementById("username").value;
+		document.getElementById("outputUsername").innerHTML = un;
+		
+		var g = document.getElementById("gender").value;
+		document.getElementById("outputGender").innerHTML = g;
+		
+		var p = document.getElementById("password").value;
+		document.getElementById("outputPassword").innerHTML = p;
+		
+		var e = document.getElementById("email").value;
+		document.getElementById("outputEmail").innerHTML = e;
+		
+		var a = document.getElementById("address").value;
+		document.getElementById("outputAddress").innerHTML = a;
+		
+		var it = document.getElementById("interest").value;
+		document.getElementById("outputInterest").innerHTML = it;
+		
+		return false;
+	}
+	
+</script>
+</body>
+</html>
+
+	
