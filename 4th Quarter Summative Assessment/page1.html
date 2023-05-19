@@ -476,62 +476,61 @@
 		<span id="a15"></span>
 		</fieldset>
 	
-	<h2>II. Fill in the Blanks</h2>
-	<h3>Fill in the blanks to complete each statement. Write a pronoun that can replace all the underlined words. ( Note: Lowercase answers only )</h3>
-	
-	<fieldset>
-	<p>
-      <label for="q1">Question 16: <u>My brother and his wife</u> are going to Las Vegas.</label><br></br>
-      <input type="text" id="answer16" onkeyup="enableSubmit()">
-	   <br><br/>
-      <span id="a16"></span>
-    </p>
-	</fieldset>
-  
-    <fieldset>
-    <p>
-      <label for="q2">Question 17: Mrs. Withers is <u>Jessica's</u> sister.</label><br></br>
-      <input type="text" id="answer17" onkeyup="enableSubmit()">
-	  <br><br/>
-      <span id="a17"></span>
-    </p>
-	</fieldset>
-    
-	<fieldset>
-    <p>
-      <label for="q3">Question 18: <u> Ana,Sarah and I</u> are on our way to school.</label><br></br>
-      <input type="text" id="answer18" onkeyup="enableSubmit()">
-	  <br><br/>
-      <span id="a18"></span>
-    </p>
-	</fieldset>
-	
-	<fieldset>
-	<p>
-      <label for="q3">Question 19: The dog loves to go for a walk with <u>Jose Luis.</u></label><br></br>
-      <input type="text" id="answer19" onkeyup="enableSubmit()">
-	  <br><br/>
-	  <span id="a19"></span>
-    </p>
-	</fieldset>
-	
-	<fieldset>
-	<p>
-      <label for="q3">Question 20: The bird broke <u>the bird's</u> wing.</label><br></br>
-      <input type="text" id="answer20" onkeyup="enableSubmit()">
-	  <br><br/>
-     <span id="a20"></span>
-    </p>
-  
-	</fieldset>
-	
-	<p id="butt">
-	  <input type="submit" id="submit"> 
-      <button type="button" onclick="resetForm()">Reset</button>
-    </p>
-	
-	<p id="scoreBoard"> Total Score : 0/20 </p>
-
+		<h2>II. Fill in the Blanks</h2>
+		<h3>Fill in the blanks to complete each statement. Write a pronoun that can replace all the underlined words. ( Note: Lowercase answers only )</h3>
+		
+		<fieldset>
+		<p>
+		  <label for="q1">Question 16: <u>My brother and his wife</u> are going to Las Vegas.</label><br></br>
+		  <input type="text" id="answer16" onkeyup="enableSubmit()">
+		   <br><br/>
+		  <span id="a16"></span>
+		</p>
+		</fieldset>
+	  
+		<fieldset>
+		<p>
+		  <label for="q2">Question 17: Mrs. Withers is <u>Jessica's</u> sister.</label><br></br>
+		  <input type="text" id="answer17" onkeyup="enableSubmit()">
+		  <br><br/>
+		  <span id="a17"></span>
+		</p>
+		</fieldset>
+		
+		<fieldset>
+		<p>
+		  <label for="q3">Question 18: <u> Ana,Sarah and I</u> are on our way to school.</label><br></br>
+		  <input type="text" id="answer18" onkeyup="enableSubmit()">
+		  <br><br/>
+		  <span id="a18"></span>
+		</p>
+		</fieldset>
+		
+		<fieldset>
+		<p>
+		  <label for="q3">Question 19: The dog loves to go for a walk with <u>Jose Luis.</u></label><br></br>
+		  <input type="text" id="answer19" onkeyup="enableSubmit()">
+		  <br><br/>
+		  <span id="a19"></span>
+		</p>
+		</fieldset>
+		
+		<fieldset>
+		<p>
+		  <label for="q3">Question 20: The bird broke <u>the bird's</u> wing.</label><br></br>
+		  <input type="text" id="answer20" onkeyup="enableSubmit()">
+		  <br><br/>
+		 <span id="a20"></span>
+		</p>
+	  
+		</fieldset>
+		
+		<p id="butt">
+		  <input type="submit" id="submit"> 
+		  <button type="button" onclick="resetForm()">Reset</button>
+		</p>
+		
+		<p id="scoreBoard"> Total Score : 0/20 </p>
 </form>
 <script>
 function checkAnswers() {
@@ -723,7 +722,7 @@ function checkAnswers() {
 		feedback11.style.color = "red";
       }
 	  
-      var answer12 = document.querySelector('input[name="answer12"]:checked');
+	  var answer12 = document.querySelector('input[name="answer12"]:checked');
       if (answer12) {
         if (answer12.value === "correct") {
           feedback12.innerHTML = "Correct!<br>";
@@ -738,7 +737,7 @@ function checkAnswers() {
 		feedback12.style.color = "red";
       }
 	  
-      var answer13 = document.querySelector('input[name="answer13"]:checked');
+	  var answer13 = document.querySelector('input[name="answer13"]:checked');
       if (answer13) {
         if (answer13.value === "correct") {
           feedback13.innerHTML = "Correct!<br>";
@@ -768,7 +767,7 @@ function checkAnswers() {
 		feedback14.style.color = "red";
       }
 	  
-      var answer15 = document.querySelector('input[name="answer15"]:checked');
+	  var answer15 = document.querySelector('input[name="answer15"]:checked');
       if (answer15) {
         if (answer15.value === "correct") {
           feedback15.innerHTML = "Correct!<br>";
@@ -798,7 +797,7 @@ function checkAnswers() {
 		feedback16.style.color = "red";
       }
 	  
-      var answer17 = document.getElementById("answer17").value.trim();
+	  var answer17 = document.getElementById("answer17").value.trim();
       if (answer17) {
         if (answer17.toLowerCase() === "her") {
           feedback17.innerHTML = "Correct!<br>";
@@ -813,7 +812,7 @@ function checkAnswers() {
 		feedback17.style.color = "red";
       }
 	  
-      var answer18 = document.getElementById("answer18").value.trim();
+	  var answer18 = document.getElementById("answer18").value.trim();
       if (answer18) {
         if (answer18.toLowerCase() === "we") {
           feedback18.innerHTML = "Correct!<br>";
@@ -828,7 +827,7 @@ function checkAnswers() {
 		feedback18.style.color = "red";
       }
       
-      var answer19 = document.getElementById("answer19").value.trim();
+	  var answer19 = document.getElementById("answer19").value.trim();
       if (answer19) {
         if (answer19.toLowerCase() === "him") {
           feedback19.innerHTML = "Correct!<br>";
@@ -937,7 +936,6 @@ function checkAnswers() {
 		
 	return false;
 	}
- 
 </script>
 </body>
 </html>
