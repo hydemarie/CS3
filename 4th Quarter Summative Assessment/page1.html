@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="author" content="Gales, Yungco, Del Socorro"> 
+  <meta name="keywords" content="HTML, CSS, JavaScript"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito+Sans:wght@200&family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,800;1,100;1,800&family=Raleway:wght@300&family=Roboto&family=Roboto+Slab:wght@500;600&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>NCE Reviewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #CB4F4F;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: white;
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1{
+	  font-weight:bold;
+	  color:white;
+	}
+	
+    form {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    fieldset {
+      background-color: #FFFDFA;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+      font-size: 20px;
+      margin: 0 auto 20px;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-color: #FC9C2C;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 25px;
+    }
+
+    input[type="radio"],
+    input[type="text"],
+    input[type="number"] {
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+
+    button {
+      background-color: #FC9C2C;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+      border-radius: 15px;
+      font-size: 25px;
+    }
+
+    button:hover {
+      background-color: white;
+      color: #FC9C2C;
+    }
+
+    #result {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .feedback {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .essay {
+      background-color: #FFFDFA;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .submission {
+      text-align: center;
+      padding-top: 15px;
+    }
+
+    #scoreBoard {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 25px;
+    }
+	
+	#submit {
+      background-color: #FC9C2C;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+      border-radius: 15px;
+      font-size: 25px;
+    }
+
+    #submit:hover {
+      background-color: white;
+      color: #FC9C2C;
+    }
+	
+	.guide p{
+	  color:white;
+	}
+	
+	.guide h1{
+	  font-size:50px;
+	}
+
+</style>
+</head>
+<body>
+<div class="guide">
+  <h1> NCE REVIEWER <br>English Category</h1>
+  <p> Read and understand the instructions for each question carefully. <br/>
+  Pay attention to any specific guidelines, word limits, or formatting requirements.<br/>
+  Make sure you're clear on what is expected of you in each question or task.</p>
+</div>
+  <h2> I. Multiple Choice</h2>
+   <h3>Read the following questions carefully and choose the letter that best describes the answer.</h3>
+	<form id="quizForm" onsubmit="submitForm(event); checkAnswers()">
+		<fieldset>
+		<legend>Question 1</legend>
+		<div class="container">
+			<div class="choices">
+			<p> You can take the book with you ..... you give it back.</p>
+			<label>
+			<input type="radio" name="answer1" value="incorrect" oninput="enableSubmit()"> a) as well as<br>
+			</label>
+			<label>
+			<input type="radio" name="answer1" value="correct" oninput="enableSubmit()"> b) as long as<br>
+			</label>
+			<label>
+			<input type="radio" name="answer1" value="incorrect" oninput="enableSubmit()"> c) as far as<br>
+			</label>
+			<label>
+			<input type="radio" name="answer1" value="incorrect" oninput="enableSubmit()"> d) as time as<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a1"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 2</legend>
+		<div class="container">
+			<div class="choices">
+			<p>statesman : politician ::</p>
+			<label>
+			<input type="radio" name="answer2" value="correct" oninput="enableSubmit()"> a) lady : woman<br>
+			</label>
+			<label>
+			<input type="radio" name="answer2" value="incorrect" oninput="enableSubmit()"> b) man : person<br>
+			</label>
+			<label>
+			<input type="radio" name="answer2" value="incorrect" oninput="enableSubmit()"> c) dog : lion<br>
+			</label>
+			<label>
+			<input type="radio" name="answer2" value="incorrect" oninput="enableSubmit()"> d) bird : eagle<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a2"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 3</legend>
+		<div class="container">
+			<div class="choices">
+			<p>What is a synonym for "heretic"?</p>
+			<label>
+			<input type="radio" name="answer3" value="incorrect" oninput="enableSubmit()"> a) supporter<br>
+			</label>
+			<label>
+			<input type="radio" name="answer3" value="correct" oninput="enableSubmit()"> b) noncomformist<br>
+			</label>
+			<label>
+			<input type="radio" name="answer3" value="incorrect" oninput="enableSubmit()"> c) prophet<br>
+			</label>
+			<label>
+			<input type="radio" name="answer3" value="incorrect" oninput="enableSubmit()"> d) demagogue<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a3"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 4</legend>
+		<div class="container">
+			<div class="choices">
+			<p>If he_____ come, tell him to ring back later.</p>
+			<label>
+			<input type="radio" name="answer4" value="incorrect" oninput="enableSubmit()"> a) should<br>
+			</label>
+			<label>
+			<input type="radio" name="answer4" value="incorrect" oninput="enableSubmit()"> b) can<br>
+			</label>
+			<label>
+			<input type="radio" name="answer4" value="incorrect" oninput="enableSubmit()"> c) might<br>
+			</label>
+			<label>
+			<input type="radio" name="answer4" value="correct" oninput="enableSubmit()"> d) will<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a4"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 5</legend>
+		<div class="container">
+			<div class="choices">
+			<p>_____ not been for his help, I couldn't have passed.</p>
+			<label>
+			<input type="radio" name="answer5" value="incorrect" oninput="enableSubmit()"> a) If it<br>
+			</label>
+			<label>
+			<input type="radio" name="answer5" value="incorrect" oninput="enableSubmit()"> b) Was he<br>
+			</label>
+			<label>
+			<input type="radio" name="answer5" value="correct" oninput="enableSubmit()"> c) Had it<br>
+			</label>
+			<label>
+			<input type="radio" name="answer5" value="incorrect" oninput="enableSubmit()"> d) If he had<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a5"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 6</legend>
+		<div class="container">
+			<div class="choices">
+			<p>If you _____ mind waiting, I'll call and check if Mr Owen is in.</p>
+			<label>
+			<input type="radio" name="answer6" value="incorrect" oninput="enableSubmit()"> a) will<br>
+			</label>
+			<label>
+			<input type="radio" name="answer6" value="incorrect" oninput="enableSubmit()"> b) do</br>
+			</label>
+			<label>
+			<input type="radio" name="answer6" value="incorrect" oninput="enableSubmit()"> c) could<br>
+			</label>
+			<label>
+			<input type="radio" name="answer6" value="correct" oninput="enableSubmit()"> d) wouldn't<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a6"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 7</legend>
+		<div class="container">
+			<div class="choices">
+			<p>I feel an _____ impulse to sneeze.</p>
+			<label>
+			<input type="radio" name="answer7" value="incorrect" oninput="enableSubmit()"> a) irrasistible<br>
+			</label>
+			<label>
+			<input type="radio" name="answer7" value="correct" oninput="enableSubmit()"> b) irresistible<br>
+			</label>
+			<label>
+			<input type="radio" name="answer7" value="incorrect" oninput="enableSubmit()"> c) iresistible<br>
+			</label>
+			<label>
+			<input type="radio" name="answer7" value="incorrect" oninput="enableSubmit()"> d) irrisestible<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a7"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 8</legend>
+		<div class="container">
+			<div class="choices">
+			<p>barometer : weather ::</p>
+			<label>
+			<input type="radio" name="answer8" value="incorrect" oninput="enableSubmit()"> a) decibel : sound<br>
+			</label>
+			<label>
+			<input type="radio" name="answer8" value="correct" oninput="enableSubmit()"> b) thermometer : heat<br>
+			</label>
+			<label>
+			<input type="radio" name="answer8" value="incorrect" oninput="enableSubmit()"> c) odometer : smell<br>
+			</label>
+			<label>
+			<input type="radio" name="answer8" value="incorrect" oninput="enableSubmit()"> d) kilometer : length<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a8"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 9</legend>
+		<div class="container">
+			<div class="choices">
+			<p>mycology : fungi ::</p>
+			<label>
+			<input type="radio" name="answer9" value="incorrect" oninput="enableSubmit()"> a) science : animals<br>
+			</label>
+			<label>
+			<input type="radio" name="answer9" value="incorrect" oninput="enableSubmit()"> b) trees : greenhouse<br>
+			</label>
+			<label>
+			<input type="radio" name="answer9" value="incorrect" oninput="enableSubmit()"> c) sounds : musicology<br>
+			</label>
+			<label>
+			<input type="radio" name="answer9" value="correct" oninput="enableSubmit()"> d) dendrology : trees<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a9"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 10</legend>
+		<div class="container">
+			<div class="choices">
+			<p>Mandarin : China ::</p>
+			<label>
+			<input type="radio" name="answer10" value="correct" oninput="enableSubmit()"> a) Thai : Thailand<br>
+			</label>
+			<label>
+			<input type="radio" name="answer10" value="incorrect" oninput="enableSubmit()"> b) Manila : Philippines<br>
+			</label>
+			<label>
+			<input type="radio" name="answer10" value="incorrect" oninput="enableSubmit()"> c) Wales : England<br>
+			</label>
+			<label>
+			<input type="radio" name="answer10" value="incorrect" oninput="enableSubmit()"> d) Spain : Spanish<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a10"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 11</legend>
+		<div class="container">
+			<div class="choices">
+			<p>They were having dinner. Identify the pronoun.</p>
+			<label>
+			<input type="radio" name="answer11" value="incorrect" oninput="enableSubmit()"> a) dinner<br>
+			</label>
+			<label>
+			<input type="radio" name="answer11" value="correct" oninput="enableSubmit()"> b) they<br>
+			</label>
+			<label>
+			<input type="radio" name="answer11" value="incorrect" oninput="enableSubmit()"> c) were<br>
+			</label>
+			<label>
+			<input type="radio" name="answer11" value="incorrect" oninput="enableSubmit()"> d) having<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a11"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 12</legend>
+		<div class="container">
+			<div class="choices">
+			<p>I want to sleep. Identify the pronoun.</p>
+			<label>
+			<input type="radio" name="answer12" value="incorrect" oninput="enableSubmit()"> a) to<br>
+			</label>
+			<label>
+			<input type="radio" name="answer12" value="incorrect" oninput="enableSubmit()"> b) sleep<br>
+			</label>
+			<label>
+			<input type="radio" name="answer12" value="correct" oninput="enableSubmit()"> c) I<br>
+			</label>
+			<label>
+			<input type="radio" name="answer12" value="incorrect" oninput="enableSubmit()"> d) want<br>
+			<label>
+			</div>
+		</div><br/>
+		<span id="a12"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 13</legend>
+		<div class="container">
+			<div class="choices">
+			<p>Is that my laptop? Identify the pronoun.</p>
+			<label>
+			<input type="radio" name="answer13" value="correct" oninput="enableSubmit()"> a) my<br>
+			</label>
+			<label>
+			<input type="radio" name="answer13" value="incorrect" oninput="enableSubmit()"> b) laptop<br>
+			</label>
+			<label>
+			<input type="radio" name="answer13" value="incorrect" oninput="enableSubmit()"> c) is<br>
+			</label>
+			<label>
+			<input type="radio" name="answer13" value="incorrect" oninput="enableSubmit()"> d) that<br>
+			<label>
+			</div>
+		</div><br/>
+		<span id="a13"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 14</legend>
+		<div class="container">
+			<div class="choices">
+			<p>Pick the word with the correct spelling.</p> 
+			<label>
+			<input type="radio" name="answer14" value="incorrect" oninput="enableSubmit()"> a) perserverance<br>
+			</label>
+			<label>
+			<input type="radio" name="answer14" value="incorrect" oninput="enableSubmit()"> b) perrsaverance<br>
+			</label>
+			<label>
+			<input type="radio" name="answer14" value="incorrect" oninput="enableSubmit()"> c) peersaverance<br>
+			</label>
+			<label>
+			<input type="radio" name="answer14" value="correct" oninput="enableSubmit()"> d) perseverance<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a14"></span>
+		</fieldset>
+
+		<fieldset>
+		<legend>Question 15</legend>
+		<div class="container">
+			<div class="choices">
+			<p>Pick the word with the correct spelling. </p>
+			<label>
+			<input type="radio" name="answer15" value="incorrect" oninput="enableSubmit()"> a) commitee<br>
+			</label>
+			<label>
+			<input type="radio" name="answer15" value="incorrect" oninput="enableSubmit()"> b) cometti<br>
+			</label>
+			<label>
+			<input type="radio" name="answer15" value="incorrect" oninput="enableSubmit()"> c) comittee<br>
+			</label>
+			<label>
+			<input type="radio" name="answer15" value="correct" oninput="enableSubmit()"> d) committee<br>
+			</label>
+			</div>
+		</div><br/>
+		<span id="a15"></span>
+		</fieldset>
+	
+	<h2>II. Fill in the Blanks</h2>
+	<h3>Fill in the blanks to complete each statement. Write a pronoun that can replace all the underlined words. ( Note: Lowercase answers only )</h3>
+	
+	<fieldset>
+	<p>
+      <label for="q1">Question 16: <u>My brother and his wife</u> are going to Las Vegas.</label><br></br>
+      <input type="text" id="answer16" onkeyup="enableSubmit()">
+	   <br><br/>
+      <span id="a16"></span>
+    </p>
+	</fieldset>
+  
+    <fieldset>
+    <p>
+      <label for="q2">Question 17: Mrs. Withers is <u>Jessica's</u> sister.</label><br></br>
+      <input type="text" id="answer17" onkeyup="enableSubmit()">
+	  <br><br/>
+      <span id="a17"></span>
+    </p>
+	</fieldset>
+    
+	<fieldset>
+    <p>
+      <label for="q3">Question 18: <u> Ana,Sarah and I</u> are on our way to school.</label><br></br>
+      <input type="text" id="answer18" onkeyup="enableSubmit()">
+	  <br><br/>
+      <span id="a18"></span>
+    </p>
+	</fieldset>
+	
+	<fieldset>
+	<p>
+      <label for="q3">Question 19: The dog loves to go for a walk with <u>Jose Luis.</u></label><br></br>
+      <input type="text" id="answer19" onkeyup="enableSubmit()">
+	  <br><br/>
+	  <span id="a19"></span>
+    </p>
+	</fieldset>
+	
+	<fieldset>
+	<p>
+      <label for="q3">Question 20: The bird broke <u>the bird's</u> wing.</label><br></br>
+      <input type="text" id="answer20" onkeyup="enableSubmit()">
+	  <br><br/>
+     <span id="a20"></span>
+    </p>
+  
+	</fieldset>
+	
+	<p id="butt">
+	  <input type="submit" id="submit"> 
+      <button type="button" onclick="resetForm()">Reset</button>
+    </p>
+	
+	<p id="scoreBoard"> Total Score : 0/20 </p>
+
+</form>
+<script>
+function checkAnswers() {
+      var score = 0;
+      var feedback1 = document.getElementById("a1");
+	  var feedback2 = document.getElementById("a2");
+	  var feedback3 = document.getElementById("a3");
+	  var feedback4 = document.getElementById("a4");
+	  var feedback5 = document.getElementById("a5");
+	  var feedback6 = document.getElementById("a6");
+	  var feedback7 = document.getElementById("a7");
+	  var feedback8 = document.getElementById("a8");
+	  var feedback9 = document.getElementById("a9");
+	  var feedback10 = document.getElementById("a10");
+	  var feedback11 = document.getElementById("a11");
+	  var feedback12 = document.getElementById("a12");
+	  var feedback13 = document.getElementById("a13");
+	  var feedback14 = document.getElementById("a14");
+	  var feedback15 = document.getElementById("a15");
+	  var feedback16 = document.getElementById("a16");
+	  var feedback17 = document.getElementById("a17");
+	  var feedback18 = document.getElementById("a18");
+	  var feedback19 = document.getElementById("a19");
+	  var feedback20 = document.getElementById("a20");
+      
+      var answer1 = document.querySelector('input[name="answer1"]:checked');
+      if (answer1) {
+        if (answer1.value === "correct") {
+          feedback1.innerHTML = "Correct!<br>";
+		  feedback1.style.color = "green";
+          score++;
+        } else {
+          feedback1.innerHTML = "Incorrect. Correct answer is b. <br>";
+		  feedback1.style.color = "red";
+        }
+      } else {
+        feedback1.innerHTML = "Please answer.<br>";
+		feedback1.style.color = "red";
+      }
+	  
+	  var answer2 = document.querySelector('input[name="answer2"]:checked');
+      if (answer2) {
+        if (answer2.value === "correct") {
+          feedback2.innerHTML = "Correct!<br>";
+		  feedback2.style.color = "green";
+          score++;
+        } else {
+          feedback2.innerHTML = "Incorrect. Correct answer is a. <br>";
+		  feedback2.style.color = "red";
+		  
+        }
+      } else {
+        feedback2.innerHTML = "Please answer.<br>";
+		 feedback2.style.color = "red";
+      }
+      
+	  var answer3 = document.querySelector('input[name="answer3"]:checked');
+      if (answer3) {
+        if (answer3.value === "correct") {
+          feedback3.innerHTML = "Correct!<br>";
+		  feedback3.style.color = "green";
+          score++;
+        } else {
+          feedback3.innerHTML = "Incorrect. Correct answer is b.<br>";
+		  feedback3.style.color = "red";
+        }
+      } else {
+        feedback3.innerHTML = "Please answer.<br>";
+		feedback3.style.color = "red";
+      }
+	  
+	  var answer4 = document.querySelector('input[name="answer4"]:checked');
+      if (answer4) {
+        if (answer4.value === "correct") {
+          feedback4.innerHTML = "Correct!";
+		  feedback4.style.color = "green";
+          score++;
+        } else {
+          feedback4.innerHTML = "Incorrect. Correct answer is d. <br>";
+		  feedback4.style.color = "red";
+        }
+      } else {
+        feedback4.innerHTML = "Please answer.<br>";
+		feedback4.style.color = "red";
+      }
+	  
+	  var answer5 = document.querySelector('input[name="answer5"]:checked');
+      if (answer5) {
+        if (answer5.value === "correct") {
+          feedback5.innerHTML = "Correct!<br>";
+		  feedback5.style.color = "green";
+          score++;
+        } else {
+          feedback5.innerHTML = "Incorrect. Correct answer is c.<br>";
+		  feedback5.style.color = "red";
+        }
+      } else {
+        feedback5.innerHTML = "Please answer.<br>";
+		feedback5.style.color = "red";
+      }
+	  
+	  var answer6 = document.querySelector('input[name="answer6"]:checked');
+      if (answer6) {
+        if (answer6.value === "correct") {
+          feedback6.innerHTML = "Correct!<br>";
+		  feedback6.style.color = "green";
+          score++;
+        } else {
+          feedback6.innerHTML = "Incorrect. Correct answer is d.<br>";
+		  feedback6.style.color = "red";
+        }
+      } else {
+        feedback6.innerHTML = "Please answer.<br>";
+		feedback6.style.color = "red";
+      }
+	  
+	  var answer7 = document.querySelector('input[name="answer7"]:checked');
+      if (answer7) {
+        if (answer7.value === "correct") {
+          feedback7.innerHTML = "Correct!<br>";
+		  feedback7.style.color = "green";
+          score++;
+        } else {
+          feedback7.innerHTML = "Incorrect. Correct answer is b<br>";
+		  feedback7.style.color = "red";
+        }
+      } else {
+        feedback7.innerHTML = "Please answer.<br>";
+		feedback7.style.color = "red";
+      }
+	  
+	  var answer8 = document.querySelector('input[name="answer8"]:checked');
+      if (answer8) {
+        if (answer8.value === "correct") {
+          feedback8.innerHTML = "Correct!<br>";
+		  feedback8.style.color = "green";
+          score++;
+        } else {
+          feedback8.innerHTML = "Incorrect. Correct answer is b.<br>";
+		  feedback8.style.color = "red";
+        }
+      } else {
+        feedback8.innerHTML = "Please answer.<br>";
+		feedback8.style.color = "red";
+      }
+	  
+	  var answer9 = document.querySelector('input[name="answer9"]:checked');
+      if (answer9) {
+        if (answer9.value === "correct") {
+          feedback9.innerHTML = "Correct!<br>";
+		  feedback9.style.color = "green";
+          score++;
+        } else {
+          feedback9.innerHTML = "Incorrect. Correct answer is d.<br>";
+		  feedback9.style.color = "red";
+        }
+      } else {
+        feedback9.innerHTML = "Please answer.<br>";
+		feedback9.style.color = "red";
+      }
+	  
+	  var answer10 = document.querySelector('input[name="answer10"]:checked');
+      if (answer10) {
+        if (answer10.value === "correct") {
+          feedback10.innerHTML = "Correct!<br>";
+		  feedback10.style.color = "green";
+          score++;
+        } else {
+          feedback10.innerHTML = "Incorrect. Correct answer is a.<br>";
+		  feedback10.style.color = "red";
+        }
+      } else {
+        feedback10.innerHTML = "Please answer.<br>";
+		feedback10.style.color = "red";
+      }
+	  
+	  var answer11 = document.querySelector('input[name="answer11"]:checked');
+      if (answer11) {
+        if (answer11.value === "correct") {
+          feedback11.innerHTML = "Correct!<br>";
+		  feedback11.style.color = "green";
+          score++;
+        } else {
+          feedback11.innerHTML = "Incorrect. Correct answer is b.<br>";
+		  feedback11.style.color = "red";
+        }
+      } else {
+        feedback11.innerHTML = "Please answer.<br>";
+		feedback11.style.color = "red";
+      }
+	  
+	  var answer12 = document.querySelector('input[name="answer12"]:checked');
+      if (answer12) {
+        if (answer12.value === "correct") {
+          feedback12.innerHTML = "Correct!<br>";
+		  feedback12.style.color = "green";
+          score++;
+        } else {
+          feedback12.innerHTML = "Incorrect. Correct answer is c.<br>";
+		  feedback12.style.color = "red";
+        }
+      } else {
+        feedback12.innerHTML = "Please answer.<br>";
+		feedback12.style.color = "red";
+      }
+	  
+	  var answer13 = document.querySelector('input[name="answer13"]:checked');
+      if (answer13) {
+        if (answer13.value === "correct") {
+          feedback13.innerHTML = "Correct!<br>";
+		  feedback13.style.color = "green";
+          score++;
+        } else {
+          feedback13.innerHTML = "Incorrect. Correct answer is d.<br>";
+		  feedback13.style.color = "red";
+        }
+      } else {
+        feedback13.innerHTML = "Please answer.<br>";
+		feedback13.style.color = "red";
+      }
+	  
+	  var answer14 = document.querySelector('input[name="answer14"]:checked');
+      if (answer14) {
+        if (answer14.value === "correct") {
+          feedback14.innerHTML = "Correct!<br>";
+		  feedback14.style.color = "green";
+          score++;
+        } else {
+          feedback14.innerHTML = "Incorrect. Correct answer is a<br>";
+		  feedback14.style.color = "red";
+        }
+      } else {
+        feedback14.innerHTML = "Please answer.<br>";
+		feedback14.style.color = "red";
+      }
+	  
+	  var answer15 = document.querySelector('input[name="answer15"]:checked');
+      if (answer15) {
+        if (answer15.value === "correct") {
+          feedback15.innerHTML = "Correct!<br>";
+		  feedback15.style.color = "green";
+          score++;
+        } else {
+          feedback15.innerHTML = "Incorrect. Correct answer is a.<br>";
+		  feedback15.style.color = "red";
+        }
+      } else {
+        feedback15.innerHTML = "Please answer.<br>";
+		feedback15.style.color = "red";
+      }
+	  
+      var answer16 = document.getElementById("answer16").value;
+      if (answer16) {
+        if (answer16.toLowerCase() === "they") {
+          feedback16.innerHTML = "Correct!<br>";
+		  feedback16.style.color = "green";
+          score++;
+        } else {
+          feedback16.innerHTML = "Incorrect. Correct answer is they.<br>";
+		  feedback16.style.color = "red";
+        }
+      } else {
+        feedback16.innerHTML = "Please answer.<br>";
+		feedback16.style.color = "red";
+      }
+	  
+	  var answer17 = document.getElementById("answer17").value.trim();
+      if (answer17) {
+        if (answer17.toLowerCase() === "her") {
+          feedback17.innerHTML = "Correct!<br>";
+		  feedback17.style.color = "green";
+          score++;
+        } else {
+          feedback17.innerHTML = "Incorrect. Correct answer is her.<br>";
+		  feedback17.style.color = "red";
+        }
+      } else {
+        feedback17.innerHTML = "Please answer.<br>";
+		feedback17.style.color = "red";
+      }
+	  
+	  var answer18 = document.getElementById("answer18").value.trim();
+      if (answer17) {
+        if (answer18.toLowerCase() === "") {
+          feedback18.innerHTML = "Correct!<br>";
+		  feedback18.style.color = "green";
+          score++;
+        } else {
+          feedback18.innerHTML = "Incorrect. Correct answer is we.<br>";
+		  feedback18.style.color = "red";
+        }
+      } else {
+        feedback18.innerHTML = "Please answer.<br>";
+		feedback18.style.color = "red";
+      }
+      
+	  var answer19 = document.getElementById("answer19").value.trim();
+      if (answer19) {
+        if (answer19.toLowerCase() === "him") {
+          feedback19.innerHTML = "Correct!<br>";
+		  feedback19.style.color = "green";
+          score++;
+        } else {
+          feedback19.innerHTML = "Incorrect. Correct answer is him.<br>";
+		  feedback19.style.color = "red";
+        }
+      } else {
+        feedback19.innerHTML = "Please answer.<br>";
+		feedback19.style.color = "red";
+      }
+	  
+	  var answer20 = document.getElementById("answer20").value.trim();
+      if (answer20) {
+        if (answer20.toLowerCase() === "its") {
+          feedback20.innerHTML = "Correct!<br>";
+		  feedback20.style.color = "green";
+          score++;
+        } else {
+          feedback20.innerHTML = "Incorrect. Correct answer is its.<br>";
+		  feedback20.style.color = "red";
+        }
+      } else {
+        feedback20.innerHTML = "Please answer.<br>";
+		feedback20.style.color = "red";
+      }
+	 
+      document.getElementById("scoreBoard").innerHTML = "Total Score : " + score + "/20";
+    }
+    
+    function resetForm() {
+      var feedback1 = document.getElementById("a1");
+	  var feedback2 = document.getElementById("a2");
+	  var feedback3 = document.getElementById("a3");
+	  var feedback4 = document.getElementById("a4");
+	  var feedback5 = document.getElementById("a5");
+	  var feedback6 = document.getElementById("a6");
+	  var feedback7 = document.getElementById("a7");
+	  var feedback8 = document.getElementById("a8");
+	  var feedback9 = document.getElementById("a9");
+	  var feedback10 = document.getElementById("a10");
+	  var feedback11 = document.getElementById("a11");
+	  var feedback12 = document.getElementById("a12");
+	  var feedback13 = document.getElementById("a13");
+	  var feedback14 = document.getElementById("a14");
+	  var feedback15 = document.getElementById("a15");
+	  var feedback16 = document.getElementById("a16");
+	  var feedback17 = document.getElementById("a17");
+	  var feedback18 = document.getElementById("a18");
+	  var feedback19 = document.getElementById("a19");
+	  var feedback20 = document.getElementById("a20");
+      
+      // Reset all input values
+      var inputs = document.getElementsByTagName("input");
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type === "radio") {
+          inputs[i].checked = false;
+        } else if (inputs[i].type === "text") {
+          inputs[i].value = "";
+        }
+      }
+      
+      // Clear feedback and score
+      feedback1.innerHTML = "";
+	  feedback2.innerHTML = "";
+	  feedback3.innerHTML = "";
+	  feedback4.innerHTML = "";
+	  feedback5.innerHTML = "";
+	  feedback6.innerHTML = "";
+	  feedback7.innerHTML = "";
+	  feedback8.innerHTML = "";
+	  feedback9.innerHTML = "";
+	  feedback10.innerHTML = "";
+	  feedback11.innerHTML = "";
+	  feedback12.innerHTML = "";
+	  feedback13.innerHTML = "";
+	  feedback14.innerHTML = "";
+	  feedback15.innerHTML = "";
+	  feedback16.innerHTML = "";
+	  feedback17.innerHTML = "";
+	  feedback18.innerHTML = "";
+	  feedback19.innerHTML = "";
+	  feedback20.innerHTML = "";
+	  document.getElementById("scoreBoard").textContent = "Total Score : " + 0 + "/20";
+	  
+    }
+    
+    function enableSubmit() {
+      var submitButton = document.getElementById("submit");
+      
+      var allAnswered = true;
+      var inputs = document.getElementsByTagName("input");
+      for (var i = 0; i < inputs.length; i++) {
+        if ((inputs[i].type === "radio" || inputs[i].type === "text") && !inputs[i].value) {
+          allAnswered = false;
+          break;
+        }
+      }
+      
+      submitButton.disabled = !allAnswered;
+    }
+	function submitForm(event) {
+		event.preventDefault();
+		
+	return false;
+	}
+ 
+</script>
+</body>
+</html>
